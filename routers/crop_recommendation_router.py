@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from schemas.crop_recommendation_schemas import CropRecommendationData
 from services.crop_recommendation_service import predict_crop_rf, predict_crop_svm
 
-router = APIRouter(prefix="/crop", tags=["Crop Recommendation"])
+router = APIRouter()
 
 @router.post('/predict_rf')
 async def crop_predict_rf(data: CropRecommendationData):
